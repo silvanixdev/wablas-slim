@@ -15,6 +15,7 @@ $ composer update
 $config['library_name'] = 'Perpustakaan Serbaguna'; // your library name,
 $config['footer_text'] = 'Harap simpan resi ini sebagai bukti transaksi.'; // closing message,
 $config['token'] = 'token'; // token wablas
+$config['server'] = 'solo'; //change to your wablas server : solo,jogja,kudus,pati,texas
 ```
 - Activate the plugin, Go to menu System -> Plugin -> Kamar Slims -> Enable
 
