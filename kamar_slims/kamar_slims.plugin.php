@@ -24,6 +24,7 @@ $config = [];
 $config['library_name'] = 'Perpustakaan Ideal Serbaguna'; // your library name
 $config['footer_text'] = 'Harap simpan resi ini sebagai bukti transaksi.'; // closing message
 $config['token'] = 'token'; // token wablas
+$config['server'] = 'solo'; //change to your wablas server : solo,jogja,kudus,pati,texas 
 $config['secret-key'] = '123456789';
 $config['service'] = 'slims';
 
@@ -142,7 +143,7 @@ $plugin->register("circulation_after_successful_transaction", function($data) us
         ]
         }";
 
-        $request = new Request('POST', 'https://texas.wablas.com/api/v2/send', $headers, $body);
+        $request = new Request('POST', 'https://'.$config['server'].'.wablas.com/api/v2/send', $headers, $body);
         $client->sendAsync($request)->wait();
     }
 
